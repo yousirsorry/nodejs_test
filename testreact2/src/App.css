@@ -1,0 +1,96 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(56, 11, 11);
+}
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.show h2{
+    font-size: 2em;
+    color: rgb(255, 92, 92);
+    text-shadow: 0px 0px 25px  ;
+}
+.show input[type = text]{
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+.show input[type = text]:focus{
+    background-color: brown;
+    border: 3px solid black;
+}
+.box{
+    
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    animation: spin var(--num) linear infinite;
+}
+
+.particle {
+    position: fixed;
+    top: calc(var(--top) * 1px);
+    left: calc(var(--left) * 1px);
+    width: calc(var(--size) * 1px);
+    height: calc(var(--size) * 1px);
+    opacity: 0.7;
+    background-color: azure;
+    animation: rise 3.5s  linear , fade 0.5s linear ;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.7;
+    }
+    
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes spin {
+    0%{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(0deg) translateX(200px) rotate(-0deg);
+    }
+    25%{
+    top: 50%;
+    left: 50%;
+        transform: translate(-50%,-50%) rotate(90deg) translateX(200px) rotate(-90deg);
+    }
+    50%{
+    top: 50%;
+    left: 50%;
+        transform: translate(-50%,-50%) rotate(180deg) translateX(200px) rotate(-180deg);
+    }
+    75%{
+    top: 50%;
+    left: 50%;
+        transform: translate(-50%,-50%) rotate(270deg) translateX(200px) rotate(-270deg);
+    }
+    100%{
+    top: 50%;
+    left: 50%;
+        transform: translate(-50%,-50%) rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}

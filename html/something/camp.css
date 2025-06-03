@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.background {
+    pointer-events: visible;
+    position: relative;
+    background: url('camp1.png') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: -50%;
+    width: 100%;
+    height: 150vh;
+    z-index: 0;
+}
+.gray{
+    pointer-events: visible;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    z-index: 1;
+}
+.fire {
+    
+    pointer-events: visible;
+    border-radius: 40% 50% 40% 45%;
+    width:  60%;
+    height: 60%;
+    position: fixed;
+    top: 74%;
+    left: 42.5%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 140, 25, 0.25);
+    box-shadow: 0px 0px 100px 100px rgba(255, 140, 25, 0.25)  ;
+    backdrop-filter: none;
+    mix-blend-mode: color-dodge;  
+    z-index: 2;
+    animation: flicker 3s 1s infinite ease-in-out alternate , fade 1s ease-in-out 1 ;
+}
+
+.pa{
+    position: fixed;
+    top: 67%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 20%;
+    background-color: rgba(255, 241, 224, 0.114) ;
+    box-shadow: 0 0 500px 20px rgb(255, 241, 224) ;
+    border-radius: 100%;
+    z-index: 4;
+    mix-blend-mode: color-dodge;
+    animation: flicker 3s infinite ease-in-out alternate ;
+    
+}
+.pa:hover{
+    
+    
+    border: 5px solid rgba(172, 255, 47, 0.54);
+}
+
+.box{
+    top: -10%;
+    left: -10%;
+    pointer-events: none;
+    position: fixed;
+    width: 10%;
+    height: 10%;
+    background: url(match.webp) no-repeat;
+    background-size: 50px;
+    background-size: 50%;
+    z-index: 9999;
+}
+.chicken{
+    pointer-events: visible;
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 20%;
+    height: 20%;
+    background: url(Raw_Chicken_JE3_BE3.webp) no-repeat;
+    background-size: 50px;
+    background-size: 50%;
+    z-index: 9999;
+}
+
+.cooked{
+    pointer-events: none;
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 20%;
+    height: 20%;
+    background: url(Cooked_Chicken_JE3_BE3.png) no-repeat;
+    background-size: 50px;
+    background-size: 50%;
+    z-index: 9999;
+}
+.campfire{
+    top: 70%;
+    left: 30%;
+    width: 220px;
+    height: 70px;
+    position: fixed;
+    border-radius: 100px;
+    transform: perspective(50px) rotateX(10deg);
+    z-index: 4;
+    transition: all 0.5s ease-in-out ;
+    
+}
+.campfire:hover{
+    
+    box-shadow: 0 0 500px 10px rgb(255, 241, 224,0.2) ;
+    border: 5px solid rgba(172, 255, 47, 0.54);
+}
+
+.trigger{
+    position: fixed;
+    top: 67%;
+    left: 43.5%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border: 2px solid cyan;
+}
+
+#fire_img{
+    pointer-events: visible;
+    display: none;
+    position: fixed;
+    top: 67%;
+    left: 43.5%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    animation: fade 1s ease-in-out 1;
+
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(-50%, -52%) scale(1.1) rotate(5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.9) rotate(-5deg);
+        opacity: 0.8;
+    }
+}

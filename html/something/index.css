@@ -1,0 +1,25 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+.cur {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(127, 255, 195);
+    box-shadow: 0px 0px 10px 10px cyan, 0px 0px 10px 10px cyan inset;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    transform: rotateZ(25deg);
+}
